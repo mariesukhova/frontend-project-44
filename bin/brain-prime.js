@@ -10,7 +10,7 @@ const brainPrime = () => {
 
   let i = 0;
   while (i < 3) {
-    const randomNumber1 = Math.round(Math.random() * 10);
+    const randomNumber1 = Math.round(Math.random() * 100);
 
     console.log(`Question: ${randomNumber1}`);
     let isPrime = () => {
