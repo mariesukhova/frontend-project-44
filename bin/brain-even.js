@@ -24,17 +24,17 @@ const game = () => {
       }
     } else if (answer === 'yes' && !isEven) {
       console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}`,
+        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`,
       );
       break;
     } else if (answer === 'no' && isEven) {
       console.log(
-        `'no' is wrong answer ;(.\nCorrect answer was 'yes'.\nLet's try again, ${name}`,
+        `'no' is wrong answer ;(.\nCorrect answer was 'yes'.\nLet's try again, ${name}!`,
       );
       break;
     } else {
       console.log(
-        `Uncorrect answer.\nLet's try again, ${name}`,
+        `${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`,
       );
       break;
     }
