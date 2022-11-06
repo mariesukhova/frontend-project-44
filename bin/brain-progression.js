@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const gsd = () => {
+const brainProgression = () => {
   console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');
   const name = readlineSync.question('Your answer: ');
@@ -46,4 +46,4 @@ const gsd = () => {
     }
   }
 };
-gsd();
+brainProgression();
