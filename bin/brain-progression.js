@@ -40,7 +40,7 @@ const brainProgression = () => {
       }
     } else if (answer !== cover) {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${cover}'.\nLet's try again, ${name}`,
+        `'${answer}' is wrong answer ;(. Correct answer was '${cover}'.\nLet's try again, ${name}!`,
       );
       break;
     }

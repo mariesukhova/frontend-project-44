@@ -37,7 +37,7 @@ const gsd = () => {
       }
     } else if (answer !== gcdTwoNumbers) {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${gcdTwoNumbers}'.\nLet's try again, ${name}`,
+        `'${answer}' is wrong answer ;(. Correct answer was '${gcdTwoNumbers}'.\nLet's try again, ${name}!`,
       );
       break;
     }

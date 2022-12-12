@@ -37,17 +37,17 @@ const brainPrime = () => {
       }
     } else if (answer === 'yes' && !isPrime) {
       console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}`,
+        `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`,
       );
       break;
     } else if (answer === 'no' && isPrime) {
       console.log(
-        `'no' is wrong answer ;(.\nCorrect answer was 'yes'.\nLet's try again, ${name}`,
+        `'no' is wrong answer ;(.\nCorrect answer was 'yes'.\nLet's try again, ${name}!`,
       );
       break;
     } else {
       console.log(
-        `Uncorrect answer.\nLet's try again, ${name}`,
+        `Uncorrect answer.\nLet's try again, ${name}!`,
       );
       break;
     }
