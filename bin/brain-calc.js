@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { greetings } from '../src/index.js';
 
 function getMathSign() {
   const randomNum = Math.round(Math.random() * 2);
@@ -19,7 +18,10 @@ function getMathSign() {
 }
 
 const calc = () => {
-  const name = greetings();
+  console.log('Welcome to the Brain Games!');
+  console.log('May I have your name?');
+  const name = readlineSync.question('Your answer: ');
+  console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
 
   let i = 0;
