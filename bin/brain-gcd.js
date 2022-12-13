@@ -28,8 +28,7 @@ const gcd = () => {
     const gcdTwoNumbers = getGcdTwoNumbers(randomNumber1, randomNumber2);
     console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
-
-    if (answer === gcdTwoNumbers) {
+    if (answer === gcdTwoNumbers.toString()) {
       i += 1;
       if (i === 3) {
         console.log(`Congratulations, ${name}!`);
