@@ -17,8 +17,8 @@ const brainPrime = () => {
       if (randomNumber1 === 1 || randomNumber1 === 0) {
         isPrime = false;
       } else if (randomNumber1 > 1) {
-        for (let i = 2; i < randomNumber1; i += 1) {
-          if (randomNumber1 % i === 0) {
+        for (let j = 2; j < randomNumber1; j += 1) {
+          if (randomNumber1 % j === 0) {
             isPrime = false;
             break;
           }

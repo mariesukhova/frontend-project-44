@@ -26,9 +26,9 @@ const brainProgression = () => {
       return arrayAP;
     };
     const AP = getAP(randomNumber1, randomNumber2, randomNumber3);
-    const cover = AP[randomNumber4-1];
-    AP[randomNumber4-1] = '..';
-    const qwestion = AP.join(' ')
+    const cover = AP[randomNumber4 - 1];
+    AP[randomNumber4 - 1] = '..';
+    const qwestion = AP.join(' ');
     console.log(`Question: ${qwestion}`);
     const answer = readlineSync.question('Your answer: ');
 

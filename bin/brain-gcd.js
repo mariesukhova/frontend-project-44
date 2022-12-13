@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+function getGcdTwoNumbers(randomNumber1, randomNumber2) {
+  let x = randomNumber1;
+  let y = randomNumber2;
+  while (y) {
+    const t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
+
 const gcd = () => {
   console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');
@@ -14,22 +25,11 @@ const gcd = () => {
     const randomNumber2 = Math.round(Math.random() * 20);
     const expression = (`${randomNumber1} ${randomNumber2}`);
 
-    function getGcdTwoNumbers() {
-      let x = randomNumber1;
-      let y = randomNumber2;
-      while (y) {
-        const t = y;
-        y = x % y;
-        x = t;
-      }
-      return x;
-    } 
-
-    const gcdTwoNumbers = getGcdTwoNumbers();
+    const gcdTwoNumbers = getGcdTwoNumbers(randomNumber1, randomNumber2);
     console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer == gcdTwoNumbers) {
+    if (answer === gcdTwoNumbers) {
       i += 1;
       if (i === 3) {
         console.log(`Congratulations, ${name}!`);

@@ -17,8 +17,7 @@ const game = () => {
     if ((answer === 'yes' && isEven) || (answer === 'no' && !isEven)) {
       i += 1;
       if (i === 3) {
-        console.log(`Congratulations, ${name}!`
-        );
+        console.log(`Congratulations, ${name}!`);
       } else {
         console.log('Correct!');
       }
