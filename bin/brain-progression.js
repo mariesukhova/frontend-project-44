@@ -12,7 +12,7 @@ const brainProgression = () => {
   while (i < 3) {
     const randomNumber1 = Math.round(Math.random() * 5);
     const randomNumber2 = Math.round(Math.random() * 10) + randomNumber1;
-    const randomNumber3 = Math.round(Math.random() * 10) + 5;
+    const randomNumber3 = Math.round(Math.random() * 10) + 8;
     const randomNumber4 = Math.round(Math.random() * randomNumber3) + 1;
 
     const getAP = (first, second, APLength) => {
@@ -28,7 +28,8 @@ const brainProgression = () => {
     const AP = getAP(randomNumber1, randomNumber2, randomNumber3);
     const cover = AP[randomNumber4-1];
     AP[randomNumber4-1] = '..';
-    console.log(`Question: ${AP}`);
+    const qwestion = AP.join(' ')
+    console.log(`Question: ${qwestion}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer === String(cover)) {
