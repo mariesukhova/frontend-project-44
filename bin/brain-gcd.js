@@ -13,8 +13,8 @@ function getGcdTwoNumbers(num1, num2) {
   return x;
 }
 function generateExpression() {
-  const randomNumber1 = generateRandomNum(20);
-  const randomNumber2 = generateRandomNum(20);
+  const randomNumber1 = generateRandomNum(20) + 1;
+  const randomNumber2 = generateRandomNum(20) + 1;
   return (`${randomNumber1} ${randomNumber2}`);
 }
 function generateRightAnswer(expression) {
