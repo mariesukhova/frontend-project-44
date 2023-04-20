@@ -11,12 +11,11 @@ function getGcdTwoNumbers(num1, num2) {
     } else b %= a;
   }
 
-  const result = +a + +b;
-  return result;
+  return (+a) + +b;
 }
 function generateExpression() {
-  const randomNumber1 = generateRandomNum(20);
-  const randomNumber2 = generateRandomNum(20);
+  const randomNumber1 = generateRandomNum(20) + 1;
+  const randomNumber2 = generateRandomNum(20) + 1;
   return (`${randomNumber1} ${randomNumber2}`);
 }
 function generateRightAnswer(expression) {
