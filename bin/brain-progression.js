@@ -25,6 +25,10 @@ function generateRightAnswer(expression) {
   const progressionArray = expression.split(' ');
   const missedItemIndex = progressionArray.indexOf('..');
   const diff = progressionArray[1] - progressionArray[0];
+  if (missedItemIndex === 0) {
+    const missedItem = +progressionArray[missedItemIndex + 1] - (+diff);
+    return missedItem.toString();
+  }
   const missedItem = +progressionArray[missedItemIndex - 1] + (+diff);
   return missedItem.toString();
 }
