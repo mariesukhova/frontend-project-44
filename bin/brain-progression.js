@@ -1,50 +1,35 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import game from '../src/game.js';
+import generateRandomNum from '../src/generateRandomNum.js';
+
+function getAP(first, second, APLength) {
+  const arrayAP = [];
+  const diff = second - first;
+  arrayAP[0] = first;
+  for (let j = 1; j < APLength; j += 1) {
+    const next = arrayAP[j - 1] + diff;
+    arrayAP.push(next);
+  }
+  return arrayAP;
+}
+function generateExpression() {
+  const randomNumber1 = generateRandomNum(5);
+  const randomNumber2 = generateRandomNum(10) + randomNumber1;
+  const randomNumber3 = generateRandomNum(10) + 8;
+  const randomNumber4 = generateRandomNum(randomNumber3) + 1;
+  const AP = getAP(randomNumber1, randomNumber2, randomNumber3);
+  AP[randomNumber4 - 1] = '..';
+  return AP.join(' ');
+}
+function generateRightAnswer(expression) {
+  const progressionArray = expression.split(' ');
+  const missedItemIndex = progressionArray.indexOf('..');
+  const diff = progressionArray[1] - progressionArray[0];
+  const missedItem = +progressionArray[missedItemIndex - 1] + (+diff);
+  return missedItem.toString();
+}
 
 const brainProgression = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('May I have your name?');
-  const name = readlineSync.question('Your answer: ');
-  console.log(`Hello, ${name}!`);
-  console.log('What number is missing in the progression?');
-
-  let i = 0;
-  while (i < 3) {
-    const randomNumber1 = Math.round(Math.random() * 5);
-    const randomNumber2 = Math.round(Math.random() * 10) + randomNumber1;
-    const randomNumber3 = Math.round(Math.random() * 10) + 8;
-    const randomNumber4 = Math.round(Math.random() * randomNumber3) + 1;
-
-    const getAP = (first, second, APLength) => {
-      const arrayAP = [];
-      const diff = second - first;
-      arrayAP[0] = first;
-      for (let j = 1; j < APLength; j += 1) {
-        const next = arrayAP[j - 1] + diff;
-        arrayAP.push(next);
-      }
-      return arrayAP;
-    };
-    const AP = getAP(randomNumber1, randomNumber2, randomNumber3);
-    const cover = AP[randomNumber4 - 1];
-    AP[randomNumber4 - 1] = '..';
-    const qwestion = AP.join(' ');
-    console.log(`Question: ${qwestion}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === String(cover)) {
-      i += 1;
-      if (i === 3) {
-        console.log(`Congratulations, ${name}!`);
-      } else {
-        console.log('Correct!');
-      }
-    } else if (answer !== cover) {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${cover}'.\nLet's try again, ${name}!`,
-      );
-      break;
-    }
-  }
+  game('What number is missing in the progression?', generateExpression, generateRightAnswer);
 };
 brainProgression();
