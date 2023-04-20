@@ -3,18 +3,19 @@ import game from '../src/game.js';
 import generateRandomNum from '../src/generateRandomNum.js';
 
 function getGcdTwoNumbers(num1, num2) {
-  let x = num1;
-  let y = num2;
-  while (y) {
-    const t = y;
-    y = x % y;
-    x = t;
+  let a = num1;
+  let b = num2;
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else b %= a;
   }
-  return x;
+
+  return (+a) + +b;
 }
 function generateExpression() {
-  const randomNumber1 = generateRandomNum(20);
-  const randomNumber2 = generateRandomNum(20);
+  const randomNumber1 = generateRandomNum(20) + 1;
+  const randomNumber2 = generateRandomNum(20) + 1;
   return (`${randomNumber1} ${randomNumber2}`);
 }
 function generateRightAnswer(expression) {
