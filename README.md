@@ -36,12 +36,16 @@ To start the game:
 
     brain-even
 
+[![asciicast](https://asciinema.org/a/fSBsFK88fDxeToKEvCofE8dkY.svg)](https://asciinema.org/a/fSBsFK88fDxeToKEvCofE8dkY)
+
 **Calculator**
 In this game you will be given a random mathematical expression. You need to calculate it and give the result.
 
 To start the game:
 
     brain-calc
+
+[![asciicast](https://asciinema.org/a/woO4SHGcGkP1j2oxNVWAUAhQD.svg)](https://asciinema.org/a/woO4SHGcGkP1j2oxNVWAUAhQD)
 
 **Greatest common divisor**
 In this game you will be given two random numbers. You need to find their greatest common divisor.
@@ -50,6 +54,8 @@ To start the game:
 
     brain-gcd
 
+[![asciicast](https://asciinema.org/a/Y0Uj727oVSZfPHeg24CjdCgMq.svg)](https://asciinema.org/a/Y0Uj727oVSZfPHeg24CjdCgMq)
+
 **Arithmetic progression**
 In this game you will be given a random series of numbers that form an arithmetic progression with one number missing. You need to find the missing number.
 
@@ -57,9 +63,13 @@ To start the game:
 
     brain-progression
 
+[![asciicast](https://asciinema.org/a/9Usoj0gVwnmzKv4F6CEWNyZUG.svg)](https://asciinema.org/a/9Usoj0gVwnmzKv4F6CEWNyZUG)
+
 **Is this a prime number?**
 In this game you will be given a random number. Answer 'yes' if this number is prime and 'no' if it is not.
 
 To start the game:
 
     brain-prime
+
+[![asciicast](https://asciinema.org/a/zMTkO5mRRuXdUc7BAYRzhtf18.svg)](https://asciinema.org/a/zMTkO5mRRuXdUc7BAYRzhtf18)
