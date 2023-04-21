@@ -16,7 +16,7 @@ function generateExpression() {
   const randomNumber1 = generateRandomNum(5);
   const randomNumber2 = generateRandomNum(10) + randomNumber1;
   const randomNumber3 = generateRandomNum(10) + 8;
-  const randomNumber4 = generateRandomNum(1) + 1;
+  const randomNumber4 = generateRandomNum(10) + 1;
   const AP = getAP(randomNumber1, randomNumber2, randomNumber3);
   AP[randomNumber4 - 1] = '..';
   return AP.join(' ');
